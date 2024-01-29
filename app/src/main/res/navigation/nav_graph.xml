@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graaph"
+    android:label="Напоминания"
+    app:startDestination="@id/reminderFragment">
+
+    <fragment
+        android:id="@+id/reminderFragment"
+        android:name="com.example.notificationapp.fragments.ReminderFragment"
+        android:label="Напоминания"
+        tools:layout="@layout/fragment_reminder" >
+        <action
+            android:id="@+id/action_reminderFragment_to_addReminderBottomSheetFragment"
+            app:destination="@id/addEditReminderBottomSheetFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/addEditReminderBottomSheetFragment"
+        android:name="com.example.notificationapp.fragments.AddEditReminderBottomSheetFragment"
+        android:label="Напоминание"
+        tools:layout="@layout/fragment_add_reminder_bottom_sheet" />
+</navigation>

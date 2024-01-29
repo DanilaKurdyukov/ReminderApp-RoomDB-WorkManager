@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AddEditReminderBottomSheetFragment"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reminderTitle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/TextInputLayoutStyle"
+        android:hint="Название"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_reminderTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditText"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reminderDescription_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextInputLayoutStyle"
+        android:hint="Описание"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_reminderDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditText"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_reminderDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        app:shapeAppearanceOverlay="@style/FABShape"
+        app:backgroundTint="@color/purple"
+        app:icon="@drawable/baseline_date_range_24"
+        app:iconTint="@color/white"
+        android:text="Дата"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16dp"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_reminderTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        app:shapeAppearanceOverlay="@style/FABShape"
+        app:backgroundTint="@color/purple"
+        app:icon="@drawable/baseline_access_time_24"
+        app:iconTint="@color/white"
+        android:text="Время"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16dp"/>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_enable"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_margin="@dimen/main_margin"
+        android:text="Включить сразу:"
+        style="@style/SwitchStyle"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="@dimen/main_margin"
+        android:backgroundTint="@color/light_black"
+        app:borderWidth="0dp"
+        android:src="@drawable/baseline_check_24"
+        app:tint="@color/white"
+        android:layout_gravity="end"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

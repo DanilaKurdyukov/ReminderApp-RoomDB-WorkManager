@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="10dp"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="grey" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/reminder_item_background">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_reminderTitle"
+            style="@style/TextViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/main_margin"
+            android:text="Покормить кота"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/text_view_reminderDate"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/text_view_reminderDescription"/>
+
+        <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_view_reminderTime"
+        style="@style/TextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:text="time"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_reminderDate"
+        android:textAlignment="viewEnd"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_reminderDate"
+            style="@style/TextViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/main_margin"
+            android:text="дата"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/text_view_reminderTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAlignment="viewEnd"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_reminderDescription"
+            style="@style/TextViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Надо сегодня покормить котаaasd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/switch_isEnable"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/main_margin"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_isEnable"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_reminderTime"
+            android:layout_margin="@dimen/main_margin"
+            app:layout_constraintStart_toEndOf="@id/text_view_reminderDescription"
+            app:layout_constraintHorizontal_weight="1"
+            style="@style/SwitchStyle"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
